@@ -119,9 +119,13 @@ header {
   
   input[type=submit] {
     .button-layout(teal, white, 2rem);
-    width: 100%;
-    float: right;
+    width: 25%;
+    margin-left: 38%;
     margin-top: 20px;
+
+    @media @mobile {
+      margin-left: 0%;
+    }
   }
   
   input[type=submit]:hover {
@@ -135,10 +139,12 @@ header {
     padding: 20px;
     border: 1px solid teal;
     margin: 0px 100px 10px 100px;
-    
-    
+    width: 80%;
+    @media @mobile { 
+      margin-left: 10%;
+    }
   }
-  
+  ///media query
   .col-25 {
     float: left;
     width: 25%;
