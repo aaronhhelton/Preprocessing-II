@@ -16,10 +16,22 @@
 
 <body>
 
+  <header>
+    <div class="heading">
+    <h1>Fun Bus</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
   
-     
-  <div class="container home">
    
+  
+  <div class="container home">
+    <img src="img/fun-bus.jpg" alt="fun bus!">
     <section class="content-section">
       <div class="text-content">
         <h2>Let's Go!</h2>
@@ -65,7 +77,61 @@
       </div>
     </section>
   </div><!-- container -->
-
+  
+  
+    <div class="container-form">
+      <form action="/action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="email" name="email" placeholder="Your email..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="vacation">Vacation Package</label>
+          </div>
+          <div class="col-75">
+            <select id="vacation" name="vacation">
+              <option value="sun">Fun In The Sun</option>
+              <option value="mountain">Mountain Excursion</option>
+              <option value="island">Island Getaway</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="instructions">Special Instructions</label>
+          </div>
+          <div class="col-75">
+            <textarea id="instructions" name="instructions" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  
+  
   <footer class="footer">
     <p>Copyright Fun Bus 2018</p>
   </footer>

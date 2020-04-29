@@ -1,24 +1,46 @@
-.home {
 
+header {
+  border-bottom: 2px dashed silver;
+  
+  @media @mobile {
+    .flex-wrap-column();
+    padding: 0px;
+  }
+
+}
+
+.home {
+  
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media @mobile {
+      .flex-wrap-column();
+      padding: 0px;
+      align-items: center;
+    }
 
+  
+    
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      
+      
 
       img {
         border-radius: 10px;
+       
       }
     }
   }
@@ -26,24 +48,29 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+   
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    
 
     img {
       border-radius: 10px;
+      
     }
   }
 
@@ -52,10 +79,98 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      .flex-wrap-column();
+      padding: 0px;
+      align-items: center;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      
+       
+      .btn {
+        .button-layout (teal, white, 2rem);
+        
+      }
+      .btn:hover {
+        background-color: darken(teal, 10%);
+        cursor: pointer;
+      }
+    }  
+  }
+} /// home
+
+
+///form
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    .button-layout(teal, white, 2rem);
+    width: 25%;
+    margin-left: 38%;
+    margin-top: 20px;
+
+    @media @mobile {
+      margin-left: 0%;
     }
   }
-}// home
+  
+  input[type=submit]:hover {
+    background-color: darken(teal, 10%);
+    cursor: pointer;
+  }
+  
+  .container-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid teal;
+    margin: 0px 100px 10px 100px;
+    width: 80%;
+    @media @mobile { 
+      margin-left: 10%;
+    }
+  }
+  ///media query
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  @media (max-width: 500px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+
